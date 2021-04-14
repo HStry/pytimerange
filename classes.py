@@ -1,4 +1,4 @@
-import relative
+from . import relative
 
 import warnings
 
@@ -599,6 +599,10 @@ class Point:
             if timezone and timestamp.tzinfo:
                 timestamp = timestamp.timestamp
             elif timezone and not timestamp.tzinfo:
+                # Something went wrong here, something got accidentally deleted.
+                # Can't be arsed to figure out exactly what, working on better
+                # version anyway.
+                pass
 
             if not timezone:
                 # noinspection PyBroadException

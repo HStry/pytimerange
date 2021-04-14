@@ -1,5 +1,5 @@
 
-import relative
+from . import relative
 from .exceptions import *
 from .classes import *
 
